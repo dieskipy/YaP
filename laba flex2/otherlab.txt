@@ -1,0 +1,14 @@
+%option noyywrap
+
+%%
+[ ]*\<   {
+          printf ("\n<");
+         }
+\>[ ]*   {
+          printf(">\n");
+         }
+%%
+int main()
+{
+  yylex();
+}
